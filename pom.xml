@@ -8,7 +8,7 @@
 		<version>2.7.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.azizaabdelsalam.lil.sbet</groupId>
+	<groupId>com.Azizaabdelslam.lil.sbet</groupId>
 	<artifactId>booting-web</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>booting-web</name>
