@@ -12,7 +12,7 @@ COPY pom.xml /build/
 COPY src /build/src/
 # the command to cause Maven to create an application.jar file?
 RUN mvn clean package
-#  I'm going to copy target/booting-web-. then here's where I'm going to use that version value Dot jar.
+#  I'm going to copy target/booting-web-. then here's where I'm going to use that version value then'.jar'
  #And that's the pattern that Maven based Spring Boot artifacts build in.
  # And I'm going to copy it to the same location, but I'm going to rename it to be application.jar
 COPY target/booting-web-${VERSION}.jar target/application.jar
@@ -24,8 +24,9 @@ FROM openjdk:11.0.8-jre-slim
 WORKDIR /app/
 COPY --from=BUILDER /build/target/application.jar /app/
 #And now I'll set a command of Java -jar /app/application.jar and that's it.
-#We're done. So let's hop over to a terminal.
+#We're done. 
 CMD java -jar /app/application.jar
+# So let's hop over to a terminal.
 # in terminal at booting-web directory i will write "docker build -t booting-web ." So what I'm saying here is build a Docker image tagged with booting web, and that'll let us see it running later, and just build the current Dockerfile.
 # Now, before I hit enter, there's two things I want to tell you.
 # First of all, there's going to be a lot of output and time that this takes to build these images,
